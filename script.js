@@ -1,7 +1,7 @@
 let playerScore = 0;
 let computerScore = 0;
 
-const choices = ['rock', 'paper', 'scissors'];
+const choices = ["rock", "paper", "scissors"];
 
 // this function returns the choices selected by the computer
 const computerPlay = () => {
@@ -19,10 +19,10 @@ const playRound = (playerSelection, computerSelection) => {
 
   // Player winning scenarios
   const rockWin =
-    playerSelection === 'rock' && computerSelection === 'scissors';
-  const paperWin = playerSelection === 'paper' && computerSelection === 'rock';
+    playerSelection === "rock" && computerSelection === "scissors";
+  const paperWin = playerSelection === "paper" && computerSelection === "rock";
   const scissorWin =
-    playerSelection === 'scissors' && computerSelection === 'paper';
+    playerSelection === "scissors" && computerSelection === "paper";
 
   if (rockWin || paperWin || scissorWin) {
     playerScore++;
@@ -37,7 +37,7 @@ const game = () => {
   for (let i = 0; i < 5; i++) {
     // playerSelection
     const playerSelection = prompt(
-      'Do you like to choose Rock, paper or scissors?'
+      "Do you like to choose Rock, paper or scissors?"
     ).toLowerCase();
     if (choices.includes(playerSelection)) {
       console.log(`player:- you have selected ${playerSelection}`);
