@@ -1,16 +1,27 @@
+// scores
 let playerScore = 0;
 let computerScore = 0;
 
 const choices = ["rock", "paper", "scissors"];
 
-// this function returns the choices selected by the computer
+//
+/**
+ * this function returns the choices selected by the computer that rock, paper and sciccors
+ * @returns the computerselect
+ */
 const computerPlay = () => {
   const computerSelect = choices[Math.floor(Math.random() * 3)];
   console.log(`Computer:- chooses ${computerSelect}`);
   return computerSelect;
 };
 
-// this funtion returns the winning or losing scenarios by both player and computer
+//
+/**
+ * this funtion returns the winning or losing scenarios by both player and computer
+ * @param {playerSelection} - player selection of rock, paper and sciccors
+ * @param {computerSelection} -computer selection of rock, paper and sciccors
+ * @returns guard clause
+ */
 const playRound = (playerSelection, computerSelection) => {
   if (playerSelection === computerSelection) {
     console.log("It's a tie!!!!");
@@ -33,6 +44,9 @@ const playRound = (playerSelection, computerSelection) => {
   }
 };
 
+/**
+ * this game function is a loop that iterates 5 times and allows the player and computer to play the game 5 times and decide who is the winner and who got the highest score.
+ */
 const game = () => {
   for (let i = 0; i < 5; i++) {
     // playerSelection
