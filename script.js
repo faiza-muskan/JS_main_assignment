@@ -56,7 +56,9 @@ const game = () => {
     if (choices.includes(playerSelection)) {
       console.log(`player:- you have selected ${playerSelection}`);
     } else {
+      i--;
       console.log(`Wrong input`);
+      continue;
     }
     // computerSelection
     const computerSelection = computerPlay();
